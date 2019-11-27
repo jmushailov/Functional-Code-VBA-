@@ -1,0 +1,86 @@
+
+Private Sub UserForm_Initialize()
+
+  
+'Empty all text box fields'
+   TextBox1.Value = ""
+      TextBox2.Value = ""
+         TextBox3.Value = ""
+            TextBox4.Value = ""
+                ComboBox1.Value = ""
+                   TextBox6.Value = ""
+                     TextBox7.Value = ""
+                         TextBox8.Value = ""
+                             TextBox9.Value = ""
+                                TextBox10.Value = ""
+                                    TextBox11.Value = ""
+                                   
+        
+'Fill Combo Box'
+  With ComboBox1
+  .AddItem "x1"
+    .AddItem "x2"
+        .AddItem "x3"
+            .AddItem "x4"
+                .AddItem "x5"
+                    .AddItem "x6"
+                        .AddItem "x7"
+                            
+End With
+
+End Sub
+Private Sub CancelButton_Click()
+
+   Unload Me
+
+End Sub
+
+Private Sub SubmitButton_Click()
+    
+If TextBox1.Value < 0 Or IsNumeric(TextBox1.Value) = False _
+Or TextBox2.Value < 0 Or IsNumeric(TextBox2.Value) = False _
+Or TextBox3.Value < 0 Or IsNumeric(TextBox3.Value) = False _
+Or TextBox4.Value < 0 Or IsNumeric(TextBox4.Value) = False _
+Or TextBox5.Value < 0 Or IsNumeric(TextBox5.Value) = False _
+Or TextBox6.Value < 0 Or IsNumeric(TextBox6.Value) = False _
+Or TextBox7.Value < 0 Or IsNumeric(TextBox7.Value) = False _
+Or TextBox8.Value < 0 Or IsNumeric(TextBox8.Value) = False _
+Or TextBox9.Value < 0 Or IsNumeric(TextBox9.Value) = False _
+Or TextBox10.Value < 0 Or IsNumeric(TextBox10.Value) = False _
+Or TextBox11.Value < 0 Or IsNumeric(TextBox11.Value) = False Then
+    MsgBox ("Inputs must be numeric and greater than zero. Please check your inputs!")
+        
+Else
+Me.Hide
+        End If
+
+  
+End Sub
+
+
+
+
+
+##USERFORM REG OUT
+
+Sub Estimation()
+
+Dim a, b, c, d, e, f, g, h, i, j, k, estimate As Long
+Dim mark_area As String
+
+a = UserForm1.TextBox1.Value
+b = UserForm1.TextBox2.Value
+c = UserForm1.TextBox3.Value
+d = UserForm1.TextBox4.Value
+e = UserForm1.TextBox5.Value
+f = UserForm1.TextBox6.Value
+g = UserForm1.TextBox7.Value
+h = UserForm1.TextBox8.Value
+i = UserForm1.TextBox9.Value
+j = UserForm1.TextBox10.Value
+k = UserForm1.TextBox11.Value
+
+Unload UserForm1
+
+
+End Sub
